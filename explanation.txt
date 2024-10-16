@@ -1,4 +1,4 @@
-For this task, I would break down the task into these steps. First I'll use Python and Kubernetes' CronJob to schedule the cleanup operation, as Python is straightforward for such tasks and Kubernetes provides built-in mechanisms for periodic jobs.
+For this task, I would break down the task into these steps. First I'll use Python and Kubernetes' CronJob to schedule the cleanup operation, as Python is straightforward for such tasks and Kubernetes provides built-in mechanisms for periodic jobs. Here is the breakdown:
 
 
 1. Microservice:
@@ -101,3 +101,7 @@ spec:
               value: "mydatabase"
           restartPolicy: OnFailure
 ```
+
+For detailed information here is the link to the repository:
+
+https://github.com/Konami33/microservice
