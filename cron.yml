@@ -1,0 +1,25 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: cleanup-temp-posts
+spec:
+  schedule: "0 * * * *"
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          containers:
+          - name: cleanup-temp-posts
+            image: konami98/micro:latest
+            env:
+            - name: DB_HOST
+              value: "mysql"
+            - name: DB_PORT
+              value: "3306"
+            - name: DB_USER
+              value: "username"
+            - name: DB_PASSWORD
+              value: "password"
+            - name: DB_NAME
+              value: "mydatabase"
+          restartPolicy: OnFailure
